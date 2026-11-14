@@ -3,9 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "typecheck": "tsc -p tsconfig.json"
+    "typecheck": "tsc -p tsconfig.json",
+    "test:codemods": "node codemods/__tests__/button.test.cjs",
+    "migrate:button": "jscodeshift -t codemods/migrate-button.cjs --extensions=tsx,jsx --parser=tsx"
   },
   "devDependencies": {
+    "jscodeshift": "^17.4.0",
+    "postcss": "^8.5.32",
+    "postcss-value-parser": "^4.2.0",
     "typescript": "^5.4.0"
   }
 }
