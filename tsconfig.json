@@ -15,5 +15,5 @@
       "@acme/ds": ["./stubs/acme-ds/index.d.ts"]
     }
   },
-  "include": ["apps/**/*.ts", "apps/**/*.tsx"]
+  "include": ["apps/**/*.ts", "apps/**/*.tsx", "codemods/**/*.tsx"]
 }

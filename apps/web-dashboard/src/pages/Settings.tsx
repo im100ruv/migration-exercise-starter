@@ -1,20 +1,22 @@
 import * as React from 'react';
-import { Button as LegacyButton, Modal } from '@old/ui';
+import { Modal } from '@old/ui';
+
+import { Button as LegacyButton } from "@acme/ds";
 
 type Props = React.ComponentProps<typeof LegacyButton>;
 
 export const SaveButton: React.FC<{ onSave: () => void }> = ({ onSave }) => (
-  <LegacyButton variant="primary" onClick={onSave}>Save</LegacyButton>
+  <LegacyButton intent="brand" onClick={onSave}>Save</LegacyButton>
 );
 
 export const PassThrough: React.FC<Props> = (props) => <LegacyButton {...props} />;
 
 export const Cancel: React.FC<{ extra?: Props }> = ({ extra }) => (
-  <LegacyButton {...extra} variant="secondary" size="sm">Cancel</LegacyButton>
+  <LegacyButton {...extra} intent="neutral" size="small">Cancel</LegacyButton>
 );
 
 export const Confirm: React.FC<{ open: boolean; onClose: () => void }> = ({ open, onClose }) => (
   <Modal open={open} onClose={onClose}>
-    <LegacyButton variant="danger" onClick={onClose}>Close</LegacyButton>
+    <LegacyButton intent="critical" onClick={onClose}>Close</LegacyButton>
   </Modal>
 );

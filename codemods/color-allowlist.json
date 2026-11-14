@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "file": "apps/web-dashboard/src/styles/chartColors.ts",
+      "line": 8,
+      "value": "#FF6D00",
+      "count": 1,
+      "reason": "No orange token; closest RGB suggestion is red-500. Confirm the intended orange semantic."
+    },
+    {
+      "file": "apps/web-dashboard/src/styles/theme.css",
+      "line": 21,
+      "value": "#1a73e8cc",
+      "count": 1,
+      "reason": "Alpha color has no exact primitive token; closest RGB suggestion is blue-500. Preserve opacity semantics until reviewed."
+    },
+    {
+      "file": "apps/web-dashboard/src/styles/theme.css",
+      "line": 21,
+      "value": "#FF6D00",
+      "count": 1,
+      "reason": "No orange token; closest RGB suggestion is red-500. Confirm the intended orange semantic."
+    }
+  ]
+}

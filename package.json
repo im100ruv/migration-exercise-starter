@@ -3,9 +3,17 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "typecheck": "tsc -p tsconfig.json"
+    "typecheck": "tsc -p tsconfig.json",
+    "test:codemods": "node codemods/__tests__/button.test.cjs && node codemods/__tests__/colors.test.cjs",
+    "migrate:button": "jscodeshift -t codemods/migrate-button.cjs --extensions=tsx,jsx --parser=tsx",
+    "migrate:colors": "node codemods/migrate-colors.cjs",
+    "check:colors": "node codemods/check-colors.cjs",
+    "check": "npm run typecheck && npm run test:codemods && npm run check:colors"
   },
   "devDependencies": {
+    "jscodeshift": "^17.4.0",
+    "postcss": "^8.5.32",
+    "postcss-value-parser": "^4.2.0",
     "typescript": "^5.4.0"
   }
 }

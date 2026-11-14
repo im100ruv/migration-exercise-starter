@@ -1,0 +1,17 @@
+import * as React from 'react';
+
+const chartColors = {
+  primary: 'var(--color-blue-500)',
+  danger: 'var(--color-red-500)',
+};
+const series = ['var(--color-blue-500)', 'var(--color-green-500)', '#FF6D00'];
+const cardBorder = '1px solid var(--color-gray-300)';
+const anchorId = '#bad';
+const route = '#section-2';
+
+export const Example = () => (
+  <ul style={{ color: 'var(--color-gray-900)', borderColor: "var(--color-gray-300)" }}>
+    <li style={{ background: 'var(--color-blue-100)' }} />
+    <li data-target="#bad" />
+  </ul>
+);

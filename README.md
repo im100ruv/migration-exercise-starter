@@ -16,6 +16,9 @@ Read the candidate brief (DOCX) for the three tasks, rules and deliverables.
 ```
 npm install
 npm run typecheck     # must pass before AND after your migration
+npm run check         # typecheck, codemod tests, and hard-coded color enforcement
 ```
 
 Do not edit `stubs/` or `tokens/`. Put your tooling in a new top-level folder (for example `codemods/`).
+
+Run the color migration with `npm run migrate:colors -- apps/web-dashboard/src`; use `--dry-run` before applying changes. CI runs `npm run check`, which permits only the explicitly documented color exceptions in `codemods/color-allowlist.json`.
